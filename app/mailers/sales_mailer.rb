@@ -4,7 +4,7 @@ class SalesMailer < ApplicationMailer
     def send_sales(user)
         @user = user
         mail(
-            subject: "test"
+            subject: "test",
             to: @user.email
         ) do |format|
             format.text
