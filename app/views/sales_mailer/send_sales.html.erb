@@ -68,6 +68,9 @@
       .image img {
         width: 100%;
       }
+      strong {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -81,7 +84,11 @@
         <div class="description">
           <p>Hi <%= @user.name %>,</p>
           <p>
-            I am Shun, founder of Officehour. We'll launch a new platform where
+            I am Shun, founder of Officehour. I found you on <strong><%= @user.reference %></strong>, and
+            I wonder we could work with together :)
+          </p>
+          <p>  
+            We'll launch a new platform where
             people talk, learn and find fellows with each other by influencers
             like YOU. This time I'd like you to build a subscription community
             on Officehour. You can make business here.
