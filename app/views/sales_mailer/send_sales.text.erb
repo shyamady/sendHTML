@@ -1,51 +1,152 @@
-<p>Hi <%= @user.name %>,</p>
-<p>
-I am Shun, founder of Officehour. I found you on <strong><%= @user.reference %></strong>, and
-I wonder we could work with together :)
-</p>
-<p>  
-We'll launch a new platform where
-people talk, learn and find fellows with each other by influencers
-like YOU. This time I'd like you to build a subscription community
-on Officehour. You can make business here.
-</p>
-<p>There are some problems when influencers publish valuable tips:</p>
-<ul>
-<li>No way to deliver contents to only subscribers you want</li>
-<li>Hard to build a monetization model</li>
-<li>Hard to connect with customers deeply</li>
-</ul>
-<a href="https://officehour.ch" target="_link">
-    APPLY A COMMUNITY
-</a>
-<p>
-Build something 100 people subscribe, not something 1 million people
-follow. This is our concept. We're working on helping you to build a
-first subscription Slack community. You can earn money by organizing
-and managing the community stable.
-</p>
-<p>
-You can check it out
-<a
-    target="_link"
-    href="https://www.slideshare.net/ShunYamada/officehour-service-guide"
->
-    service guide.</a
->
-</p>
-<p>
-Feel free to ask me anything. And we can't wait to see your
-exciting community!
-</p>
-
----
-<p>Officrhour, Shun Yamada</p>
-<p>TEL: (1)628-867-9872</p>
-<p>MAIL: info@gociao.com</p>
-<p>
-SCHEDULE:
-<a href="https://calendly.com/ciao/30min" target="_link"
-    >https://calendly.com/ciao/30min</a
->
-</p>
-<p>©︎Officehour 2019 Officehour Inc. All rights reserved.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>開発会議</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP"
+    />
+    <style>
+      html,
+      body {
+        font-family: "Noto Sans JP";
+        color: #252526;
+        line-height: 1.8;
+        font-size: 14px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .header {
+        text-align: center;
+      }
+      .mailer {
+        max-width: 640px;
+        padding: 30px 15px;
+        margin: 0 auto;
+      }
+      .mailer .header img {
+        width: 160px;
+      }
+      .mailer .body {
+        padding: 20px 10px;
+      }
+      .mailer .body .description {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #d8d8d8;
+      }
+      .mailer .footer {
+        text-align: center;
+        font-size: 12px;
+        color: #d8d8d8;
+      }
+      .mailer .body label {
+        color: #d8d8d8;
+        font-weight: bold;
+      }
+      .mailer .body .thanks {
+        margin-top: 45px;
+      }
+      .mailer a {
+        color: #1ba1d6;
+      }
+      .btn {
+        font-size: 14px;
+        background: #ff5433;
+        border-radius: 2px;
+        color: #fff;
+        border: none;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px 15px;
+        max-width: 180px;
+        text-align: center;
+        margin: 15px 0;
+      }
+      .footer .contact p {
+        color: #555;
+        margin: 0;
+        padding: 0;
+      }
+      .image img {
+        width: 100%;
+      }
+      strong {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mailer">
+      <div class="header">
+        <a href="https://devtalk.jp">
+          <img
+            src="https://s3-ap-northeast-1.amazonaws.com/devtalks/textlogo.png"
+          />
+        </a>
+      </div>
+      <div class="body">
+        <div class="description">
+          <p><%= @user.name %>さま</p>
+          <p>
+            初めまして、突然のメールで失礼いたします。個人開発の知見が集まるサイト「<a
+              href="https://devtalk.jp"
+              >開発会議</a
+            >」 を作っている山田といいます。<%= @user.name
+            %>さまのことは、<strong><%= @user.reference %></strong
+            >を拝見し、ご連絡させていただきました。
+          </p>
+          <p><%= @user.reason %></p>
+          <p>
+            開発会議は、個人開発をしている人たち同士が集まって経験やノウハウを共有して、切磋琢磨したいという思いで作りました。
+            私もこれまで４年間、幾つもサービスを出しては閉じるを繰り返し苦しい思いをしてきました。
+            そんな中で得られた反省をこれから開発をする人たちへ同じ失敗をして欲しくないと心から望んでいます。
+            <%= @user.name %>さんの知見もぜひ、添えていただけませんでしょうか？
+          </p>
+          <p>
+            <%= @user.product
+            %>にとっては下記のようなメリットがあるかと思います。
+          </p>
+          <ul>
+            <li>新しいもの好きのユーザーにサービスを使ってもらえます。</li>
+            <li>一被リンクとしてカウントできます。</li>
+            <li>フォーラム上で悩みや相談、人探しができます。</li>
+          </ul>
+          <a href="https://devtalk.jp" target="_link">
+            <div class="btn">
+              開発会議へ登録する
+            </div>
+          </a>
+          <p>
+            まず、突然のメールになりましたことをお詫びします。
+            大前提に私はモノづくりをされている方が大好きで、<%= @user.name
+            %>さまのお力になれることがあればサイトに関わらず、なにかお手伝いできればと思います。
+            下記の連絡先より、お気軽にお問い合わせください。
+          </p>
+          <p>
+            ご検討のほど、どうぞ宜しくお願い致します！
+          </p>
+          <div class="image">
+            <img
+              src="https://s3-ap-northeast-1.amazonaws.com/devtalks/topimage.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="contact">
+          <p>開発会議 山田 俊輔</p>
+          <p>メール: info@gociao.com</p>
+          <p>
+            アポイントメント:
+            <a href="https://calendly.com/ciao/30min" target="_link"
+              >https://calendly.com/ciao/30min</a
+            >
+          </p>
+        </div>
+        <p>©︎開発会議 2019 開発会議. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

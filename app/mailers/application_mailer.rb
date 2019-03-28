@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'sy@gociao.com'
+  default from: 'info@mail.devtalk.jp'
   layout 'mailer'
 end
